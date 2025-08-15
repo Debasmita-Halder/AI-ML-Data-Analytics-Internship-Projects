@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=1">  
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}House Price Prediction - Noctura{% endblock %}
+
+    {% block content %}
+    
+    <div id="prediction-page">
+        
+        <h1>House Price Prediction</h1>
+        <form action="/prediction" method="POST">
+            <div class="form-group">
+                <label for="crim">Crime Rate (crim):</label>
+                <input type="number" step="any" name="crim" id="crim" required>
+            </div>
+            <div class="form-group">
+                <label for="rm">Average Number of Rooms (rm):</label>
+                <input type="number" step="any" name="rm" id="rm" required>
+            </div>
+            <div class="form-group">
+                <label for="lstat">Lower Status Population Percentage (lstat):</label>
+                <input type="number" step="any" name="lstat" id="lstat" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age of the House (age):</label>
+                <input type="number" step="any" name="age" id="age" required>
+            </div>
+            <div class="form-group">
+                <label for="tax">Property Tax Rate (tax):</label>
+                <input type="number" step="any" name="tax" id="tax" required>
+            </div>
+            <div class="form-group">
+                <label for="zn">Residential Zone Percentage (zn):</label>
+                <input type="number" step="any" name="zn" id="zn" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <div class="result">
+            <h2>Prediction Result</h2>
+            <p>{{ prediction_text }}</p>
+        </div>
+        {% endif %}
+    
+    </div>
+    
+
+    {% endblock %}
+</body>
+</html>

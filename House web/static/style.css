@@ -1,0 +1,1209 @@
+/* Global Reset */
+/* Gradient Background for the entire page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    background: linear-gradient(135deg, #2F3A3C, #506060); /* Slate Gray to Soft Charcoal */
+    color: #E0E0E0; /* Cool White for the text */
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0; /* Ensure no margins are pushing content */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navbar Styling */
+.navbar {
+    background:linear-gradient(to right,rgba(51, 51, 51, 0.478),rgba(28, 27, 27, 0.462)); /* Semi-transparent Slate Gray */
+    color: #F1C1B1; /* Rose Gold */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensures padding does not overflow the width */
+    background-color: #2f3a3c; /* Slate Gray */
+  
+  position: fixed; /* Makes the navbar fixed */
+/* Sticks it to the top */
+  /* Full-width navbar */
+  height:100px;
+   /* Height of the navbar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000; /* Ensures it stays on top */
+}
+/* Style for the logo in the navigation */
+nav .logo img {
+  height: 110px;  /* Adjust the height of the logo */
+  width: 160px;   /* Maintain the aspect ratio of the logo */
+  display: block; /* Removes extra space below the image */
+  padding:10px;
+}
+.name{
+  font-size:38px;
+  margin-left:-730px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold; /* Makes the text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.color1 {
+  color: #6b6d6e; /* Change to your desired color */
+}
+
+/* Color for the second part (Nova) */
+.color2 {
+  color:  #DA8A68; /* Change to your desired color */
+}
+
+/* Logo Styling */
+
+
+/* Navbar links - remove bullets and style the list */
+.nav-links {
+    list-style-type: none; /* Remove bullet points */
+    display: flex;
+    gap: 20px; /* Add spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+/* Navbar link styles */
+.nav-links a {
+    color: #E0E0E0; /* Cool White */
+    font-weight: 500;
+    text-decoration: none;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+  
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-transform: capitalize;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #FF9F9F; /* Neon Peach */
+    transform: translateY(-3px);
+}
+
+/* Call to Action Button Styling */
+
+/* Add smooth scrolling behavior when links are clicked */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main Content Section */
+.main-content {
+    margin-top: 100px; /* Increase this to avoid overlap with the fixed navbar */
+    padding: 50px 20px;
+    padding-top: 80px; /* Adds space below the fixed navbar */
+    margin: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #F1C1B1; /* Rose Gold */
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Section Paragraphs */
+p {
+    color: #E0E0E0; /* Cool White */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer Styling */
+
+
+/* Responsive Navbar */
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+
+.hero-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Overlay */
+.hero-content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensures text is above the video */
+  text-align: center;
+  color: #ffffff; /* Cool White */
+  padding: 0 1rem; /* Adds padding for responsiveness */
+}
+
+.hero-content-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background-color: rgba(56, 53, 53, 0.851);
+  padding: 13px;
+  margin-top:140px;
+  border-radius: 20px;;
+  color: #f1c1b1; /* Rose Gold */
+}
+
+.hero-content-overlay p {
+  font-size: 1.2rem;
+  padding: 15px;
+  margin-top:30px;
+  border-radius: 15px;;
+  background-color: rgba(53, 50, 50, 0.851);
+  margin-bottom: 2rem;
+  color: #ffffff; /* Cool White */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #fc8f8f; /* Neon Peach */
+  color: #2f3a3c; /* Slate Gray */
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top:30px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #f1c1b1; /* Rose Gold */
+  transform: scale(1.05);
+  color: #2f3a3c;
+}
+
+/* Features Section */
+.features-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #2F3A3C; /* Slate Gray */
+    color: #E0E0E0; /* Cool White */
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #F1C1B1; /* Rose Gold */
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: #4C5C5C; /* Soft Charcoal */
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #F1C1B1; /* Rose Gold */
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: #E0E0E0; /* Cool White */
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    background-color: #FF9F9F; /* Neon Peach */
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #4C5C5C; /* Soft Charcoal */
+    color: #E0E0E0; /* Cool White */
+}
+
+.testimonial-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #F1C1B1; /* Rose Gold */
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    max-width: 350px;
+    padding: 20px;
+    background-color: #2F3A3C; /* Slate Gray */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #E0E0E0; /* Cool White */
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #F1C1B1; /* Rose Gold */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    background-color: #FF9F9F; /* Neon Peach */
+}
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(to right, #2F3A3C, #4C5C5C); /* Gradient from Slate Gray to Soft Charcoal */
+    color: #E0E0E0; /* Cool White */
+    padding: 50px 0;
+    font-size: 1rem;
+    text-align: left;
+    position: relative;
+}
+
+/* Container for all footer content */
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Row for layout inside footer */
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Column styling */
+.footer .col-md-4, .footer .col-md-2, .footer .col-md-3 {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Footer Heading */
+.footer-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #F1C1B1; /* Rose Gold */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Footer Text */
+.footer-text {
+    color: #E0E0E0; /* Cool White */
+    line-height: 1.8;
+}
+
+.footer-text i {
+    color: #FF9F9F; /* Neon Peach */
+    margin-right: 10px;
+}
+
+/* Quick Links */
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #E0E0E0; /* Cool White */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FF9F9F; /* Neon Peach */
+    transform: translateY(-2px);
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons .social-icon {
+    color: #E0E0E0; /* Cool White */
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+    color: #FF9F9F; /* Neon Peach */
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #4C5C5C; /* Soft Charcoal */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #E0E0E0; /* Cool White */
+}
+
+.footer-bottom span {
+    color: #F1C1B1; /* Rose Gold */
+}
+
+/* Container for the house price prediction page */
+#prediction-page {
+  background-color: #0e0d0d4d; /* Cool White */
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif;
+  margin-top:50px;
+}
+
+/* Page title */
+#prediction-page h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f5fcfc; /* Slate Gray */
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #FF9F9F; /* Neon Peach */
+  padding-bottom: 10px;
+}
+
+/* Form container */
+#prediction-page form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Form group styling */
+#prediction-page .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#prediction-page label {
+  font-size: 1.1rem;
+  color: #d9e3e3; /* Soft Charcoal */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#prediction-page input {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: #0808082f; /* Light background */
+}
+
+/* Input hover and focus states */
+#prediction-page input:focus {
+  border-color: #FF9F9F; /* Neon Peach */
+  box-shadow: 0 0 8px rgba(255, 159, 159, 0.5);
+  outline: none;
+}
+
+#prediction-page input:hover {
+  border-color: #F1C1B1; /* Rose Gold */
+}
+
+/* Submit button styling */
+#prediction-page button {
+  grid-column: span 2;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #FF9F9F; /* Neon Peach */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Button hover effect */
+#prediction-page button:hover {
+  background-color: #F1C1B1; /* Rose Gold */
+  box-shadow: 0 5px 15px rgba(255, 159, 159, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Result section */
+#prediction-page .result {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1a19195e; /* Rose Gold */
+  text-align: center;
+  font-size: 1.3rem;
+  color: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Small screen adjustments */
+@media (max-width: 768px) {
+  #prediction-page form {
+      grid-template-columns: 1fr; /* Stacks the fields on smaller screens */
+  }
+  
+  #prediction-page button {
+      grid-column: span 1; /* Ensure button takes full width */
+  }
+}
+
+/* General Styles */
+
+  
+  
+  
+  /* Team Section */
+  
+  /* Footer */
+  
+  
+  
+  
+  /* Navbar Customizations */
+  /* Main Content Section Styles */
+
+/* Contact Header */
+
+  /* Scoped Styles for About Us Page */
+#about-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #2F3A3C; /* Slate Gray */
+}
+
+/* Section Titles */
+#about-page section.text-center h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  
+  color: #f7928d; /* Slate Gray */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#about-page section.text-center p {
+  color: #e2e9e9; /* Soft Charcoal */
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Features Section */
+#about-page section.row .col-md-4 {
+  background: #313131f0; /* Rose Gold */
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#about-page section.row .col-md-4:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(246, 176, 176, 0.948);
+}
+
+#about-page section.row .col-md-4 i {
+  font-size: 2.5rem;
+  color: #3c3e3e; /* Slate Gray */
+  margin-bottom: 15px;
+}
+
+#about-page section.row .col-md-4 h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f7928d; /* Slate Gray */
+}
+
+#about-page section.row .col-md-4 p {
+  color: #e1e8e8; /* Soft Charcoal */
+  font-size: 1.2rem;
+}
+
+/* Team Section */
+/* Team Section */
+/* Meet the Team Section */
+.mt-5 {
+  padding: 50px 20px; /* Add padding for spacing */
+  background-color: #4C5C5C; /* Soft Charcoal background for contrast */
+  text-align: center; /* Center align all content */
+  border-radius: 15px; /* Rounded edges for the section */
+  margin-top:-20px ;
+}
+
+.mt-5 h2 {
+  font-size: 2.5rem; /* Larger heading for emphasis */
+  color: #F1C1B1; /* Rose Gold for the title */
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.mt-5 .row {
+  display: flex;
+  justify-content: center; /* Center the team cards */
+  gap: 20px; /* Add space between team members */
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.mt-5 .col-md-4 {
+  max-width: 300px; /* Limit the width of each card */
+  background-color: #2F3A3C; /* Slate Gray for individual cards */
+  border-radius: 10px; /* Rounded corners for the cards */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mt-5 .col-md-4:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* More pronounced shadow */
+}
+
+.mt-5 img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #FF9F9F; /* Neon Peach border for profile images */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Shadow for profile images */
+}
+
+.mt-5 h5 {
+  color: #E0E0E0; /* Cool White */
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.mt-5 p {
+  color: #F1C1B1; /* Rose Gold for roles */
+  font-size: 1rem;
+  margin-top: 10px;
+  font-style: italic; /* Add style to differentiate roles */
+}
+
+
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+#about-page section.text-center,
+#about-page section.row .col-md-4,
+#about-page .team-section .row .col-md-4 img {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+.stats-section {
+  padding: 50px;
+  margin-top:-50px;
+  
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-card {
+  background: #353434;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 20px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card h2 {
+  font-size: 2rem;
+  color:#f7928d;
+  margin: 0;
+}
+
+.stat-card p {
+  margin-top: 10px;
+  color: #e9f0f0;
+  font-size: 0.9rem;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(103, 98, 98, 0.87);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: rgba(233, 143, 143, 0.2);
+  transform: rotate(45deg);
+  transition: left 0.5s ease-in-out;
+}
+
+.stat-card:hover::before {
+  left: -50%;
+}
+/* General reset for section spacing */
+/* Add these to your CSS file */
+
+/* Slide-in animation for image */
+.animate-slide-in {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Fade-in animation for text */
+.animate-fade-in {
+  opacity: 0;
+  animation: fade-in 1s forwards;
+  animation-delay: 0.5s; /* Delay for the text */
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .stat-card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+/* Global styles for the contact page */
+/* General Reset */
+/* General Styles */
+
+
+/* Contact Header Section */
+/* General Styles */
+
+
+/* Contact Container */
+.contact-container {
+  margin-top: 100px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.contact-container:hover {
+  transform: translateY(-5px);
+}
+
+.contact-container h1,
+.contact-container p {
+  transition: color 0.3s ease;
+}
+
+/* Header Section */
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: rgba(255, 255, 255, 0.119);
+  padding: 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  animation: flyInLeft 1s forwards;
+}
+
+.contact-header:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #fd807b; /* Golden Glow */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-header h1:hover {
+  transform: scale(1.1);
+  color: #0B132B;
+}
+
+.contact-header p {
+  font-size: 1.6rem;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.contact-header p:hover {
+  color: #f4827c; /* Golden Glow */
+}
+
+/* Contact Form Section */
+.contact-form {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: rgba(243, 244, 245, 0.114); /* Semi-transparent Midnight Blue */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
+}
+
+.contact-form:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #F8F9FA;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: #3e3e3d; /* Golden Glow */
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 52, 52, 0.8);
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #f4949e; /* Cinematic Red */
+  color: #3f3f3e;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3b3b3a; /* Golden Glow */
+  color: #0B132B;
+  transform: translateY(-3px);
+}
+
+/* Contact Info Section */
+.contact-info {
+  text-align: center;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.129);
+  padding: 20px;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: flyInRight 1s 1s forwards;
+}
+
+.contact-info:hover {
+  transform: translateY(-5px);
+}
+
+.contact-info p {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.contact-info p:hover {
+  color: #3f3f3e; /* Golden Glow */
+}
+
+.contact-details {
+  margin-bottom: 30px;
+}
+
+/* Social Media Links */
+.social-media {
+  margin-top: 20px;
+}
+
+.social-link {
+  color: #fffcb7;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  color: #3f3f3e; /* Golden Glow */
+  transform: scale(1.1);
+}
+
+/* Map Section */
+.contact-map {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.contact-map iframe {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.contact-map iframe:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flyInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes flyInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-header p {
+    font-size: 1.4rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .submit-btn {
+    font-size: 1.1rem;
+  }
+}
+.house-listings-header {
+  background-color: #2f3a3c;
+  color: white;
+  padding: 60px 0;
+  margin-top:70px;
+}
+
+.house-listings-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.house-listings-header p {
+  font-size: 1.2rem;
+}
+
+/* Filters Section */
+/* Filters Section */
+.house-filters {
+  background-color: #2f3a3c;
+  margin-top:30px;
+  border-radius: 20px;;
+  padding: 60px 0;
+}
+
+.house-filters .container {
+  display: flex;
+  justify-content: center; /* Centers the filter form horizontally */
+  align-items: center; /* Vertically aligns the filter form */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.house-filters form {
+  width: 100%;
+  max-width: 600px; /* Optional: adjust based on the desired form width */
+}
+
+.house-filters label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #4c5c5c;
+}
+
+.house-filters select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #404040;
+}
+
+.house-filters .btn-primary {
+  background-color: #ff9f9f;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.house-filters .btn-primary:hover {
+  background-color: #f1c1b1;
+  cursor: pointer;
+}
+
+/* Featured Properties Section */
+.featured-properties {
+  margin-top:-20px;
+  padding: 80px 0;
+}
+
+.featured-properties .house-card {
+  background-color: rgb(64, 63, 63);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-properties .house-card img {
+  width: 100%;
+  height: 200px;
+  object-fit:fill;
+  border-radius: 0;  /* Ensures the image has no border-radius */
+  /* Optional: Make sure the image is displayed in the correct box model */
+  display: block;
+  
+}
+
+.featured-properties .house-info {
+  padding: 20px;
+}
+
+.featured-properties .house-name {
+  font-size: 1.5rem;
+  color: #eaeced;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.featured-properties .house-price {
+  font-size: 1.2rem;
+  color: #ff9f9f;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.featured-properties .house-location {
+  font-size: 1rem;
+  color: #e7eaea;
+  margin-bottom: 10px;
+}
+
+.featured-properties .house-description {
+  font-size: 0.9rem;
+  color: #e8e7e7;
+  margin-bottom: 20px;
+}
+
+.featured-properties .house-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.featured-properties .btn-primary {
+  background-color: #ff9f9f;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.featured-properties .btn-primary:hover {
+  background-color: #f1c1b1;
+}
+
+/* Pagination Section */
+
+@media screen and (max-width: 767px) {
+  .house-listings-header h1 {
+      font-size: 2rem;
+  }
+
+  .house-listings-header p {
+      font-size: 1rem;
+  }
+
+  .house-filters .row {
+      text-align: center;
+  }
+
+  .house-filters .col-md-3 {
+      margin-bottom: 15px;
+  }
+
+  .featured-properties .house-card {
+      margin-bottom: 20px;
+  }
+}
+.row.g-3{
+  margin-top:30px;
+  margin-bottom:60px;
+}
+.text-center.mb-4{
+  font-family: "Cormorant Garamond", serif;
+  padding-left:-20px;
+  padding-right:20px;
+}

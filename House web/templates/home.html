@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test CSS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=1">  
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block title %}Home - Noctura{% endblock %}
+
+{% block content %}
+    
+<section class="hero-section">
+    <div class="hero-video-wrapper">
+        <video autoplay muted loop playsinline>
+            <source src="static/videoplayback.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content-overlay">
+            <h1>Discover the Future of Real Estate</h1>
+            <p>Accurately predict house prices with our advanced AI-driven platform. Get insights that matter and make informed decisions effortlessly.</p>
+            <a href="/prediction" class="cta-button">Start Predicting</a>
+        </div>
+    </div>
+</section>
+
+    <section class="features-section">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="static/AI-Powered Accuracy icon in grey and rosegold colors (1).png" alt="Feature 1">
+                <h3>AI-Powered Accuracy</h3>
+                <p>Our models deliver precise predictions using the latest machine learning algorithms.</p>
+            </div>
+            <div class="feature">
+                <img src="static/User-Friendly Interface icon in grey and rosegold colors.png" alt="Feature 2">
+                <h3>User-Friendly Interface</h3>
+                <p>Experience seamless navigation and intuitive design tailored for you.</p>
+            </div>
+            <div class="feature">
+                <img src="static/Gemini_Generated_Image_oj0u6coj0u6coj0u.jpeg" alt="Feature 3">
+                <h3>Data-Driven Insights</h3>
+                <p>Leverage extensive datasets for a comprehensive analysis of market trends.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonial-section">
+        <h2>What Our Users Say</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"This platform made it incredibly easy to understand house pricing trends. Highly recommended!"</p>
+                <span>- Sarah K.</span>
+            </div>
+            <div class="testimonial">
+                <p>"I love how simple yet effective this tool is. It saved me hours of manual calculations."</p>
+                <span>- John D.</span>
+            </div>
+            <div class="testimonial">
+                <p>"Accurate predictions and a beautiful interface. What more could I ask for?"</p>
+                <span>- Emily R.</span>
+            </div>
+        </div>
+    </section>
+    {%endblock%}
+    
+</body>
+</html>

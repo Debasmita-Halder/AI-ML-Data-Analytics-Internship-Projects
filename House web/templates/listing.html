@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houses for Sale - Noctura</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=1">
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}Houses for Sale - Noctura{% endblock %}
+
+    {% block content %}
+    <!-- Header Section -->
+    <section class="house-listings-header">
+        <div class="container text-center">
+            <h1>Explore Our Listings</h1>
+            <p>Find your dream home from our curated listings</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="house-filters py-5">
+        <div class="container">
+            <img src="static/Screenshot 2024-12-14 224339.png" alt="img">
+            <h2 class="text-center mb-4">Filter Your Search</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <label for="price-range" class="form-label" style="color:white;">Price Range</label>
+                    <select id="price-range" class="form-select">
+                        <option value="0-5000000">₹0 - ₹5,000,000</option>
+                        <option value="5000000-10000000">₹5,000,000 - ₹10,000,000</option>
+                        <option value="10000000-20000000">₹10,000,000 - ₹20,000,000</option>
+                        <option value="20000000+">₹20,000,000+</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="location" class="form-label" style="color:white;  padding-bottom: 10px;">Location</label>
+                    <select id="location" class="form-select">
+                        <option value="city-center">City Center</option>
+                        <option value="suburban-area">Suburban Area</option>
+                        <option value="hilltop-village">Hilltop Village</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="bedrooms" class="form-label" style="color:white;  padding-bottom: 10px;">Bedrooms</label>
+                    <select id="bedrooms" class="form-select">
+                        <option value="1-2">1-2 Bedrooms</option>
+                        <option value="3-4">3-4 Bedrooms</option>
+                        <option value="5+">5+ Bedrooms</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary w-100">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section class="featured-properties py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Featured Properties</h2>
+            
+            <!-- First row of properties -->
+            <div class="row g-4">
+                <!-- Featured Property 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="house-card featured">
+                        <img src="static/luxury.png" alt="Luxury Villa" class="img-fluid">
+                        <div class="house-info">
+                            <h3 class="house-name">Luxury Villa</h3>
+                            <p class="house-price">₹12,000,000</p>
+                            <p class="house-location">Located in Urban City</p>
+                            <p class="house-description">A spacious villa with modern amenities and a beautiful garden.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Featured Property 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="house-card featured">
+                        <img src="static/cottage.png" alt="Cozy Cottage" class="img-fluid">
+                        <div class="house-info">
+                            <h3 class="house-name">Cozy Cottage</h3>
+                            <p class="house-price">₹8,500,000</p>
+                            <p class="house-location">Located in Hilltop Village</p>
+                            <p class="house-description">A charming cottage with a peaceful view of the hills.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Featured Property 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="house-card featured">
+                        <img src="static/apartment.png" alt="Modern Apartment" class="img-fluid">
+                        <div class="house-info">
+                            <h3 class="house-name">Modern Apartment</h3>
+                            <p class="house-price">₹5,500,000</p>
+                            <p class="house-location">Located in City Center</p>
+                            <p class="house-description">A sleek apartment with top-notch amenities in the heart of the city.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End of first row -->
+    
+            <!-- Second row of properties -->
+            <div class="row g-3">
+                <!-- Featured Property 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="house-card featured">
+                        <img src="static/co.png" alt="Luxury Villa" class="img-fluid">
+                        <div class="house-info">
+                            <h3 class="house-name">Luxury Villa</h3>
+                            <p class="house-price">₹12,000,000</p>
+                            <p class="house-location">Located in Urban City</p>
+                            <p class="house-description">A spacious villa with modern amenities and a beautiful garden.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Featured Property 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="house-card featured">
+                        <img src="static/apar.png" alt="Cozy Cottage" class="img-fluid">
+                        <div class="house-info">
+                            <h3 class="house-name">Cozy Cottage</h3>
+                            <p class="house-price">₹8,500,000</p>
+                            <p class="house-location">Located in Hilltop Village</p>
+                            <p class="house-description">A charming cottage with a peaceful view of the hills.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Featured Property 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="house-card featured">
+                        <img src="static/luxurious.png" alt="Modern Apartment" class="img-fluid">
+                        <div class="house-info">
+                            <h3 class="house-name">Modern Apartment</h3>
+                            <p class="house-price">₹5,500,000</p>
+                            <p class="house-location">Located in City Center</p>
+                            <p class="house-description">A sleek apartment with top-notch amenities in the heart of the city.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End of second row -->
+            <div class="row g-3">
+                <!-- Featured Property 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="house-card featured">
+                        <img src="static/image copy.png" alt="Luxury Villa" class="img-fluid">
+                        <div class="house-info">
+                            <h3 class="house-name">Luxury Villa</h3>
+                            <p class="house-price">₹12,000,000</p>
+                            <p class="house-location">Located in Urban City</p>
+                            <p class="house-description">A spacious villa with modern amenities and a beautiful garden.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Featured Property 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="house-card featured">
+                        <img src="static/image.png" alt="Cozy Cottage" class="img-fluid">
+                        <div class="house-info">
+                            <h3 class="house-name">Cozy Cottage</h3>
+                            <p class="house-price">₹8,500,000</p>
+                            <p class="house-location">Located in Hilltop Village</p>
+                            <p class="house-description">A charming cottage with a peaceful view of the hills.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Featured Property 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="house-card featured">
+                        <img src="static/b1.png" alt="Modern Apartment" class="img-fluid">
+                        <div class="house-info">
+                            <h3 class="house-name">Modern Apartment</h3>
+                            <p class="house-price">₹5,500,000</p>
+                            <p class="house-location">Located in City Center</p>
+                            <p class="house-description">A sleek apartment with top-notch amenities in the heart of the city.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End of second row -->
+    
+            <!-- View More Button -->
+            <div class="text-center mt-4">
+                <a href="all-properties.html" class="btn btn-primary btn-lg" style="padding:20px; padding-left:10px; padding-right:10px; font-size:20px;">View More</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Pagination Section -->
+    
+
+    <!-- Testimonial Section -->
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=1">  
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block title %}Home - Noctura{% endblock %}
+
+{% block content %}
+   
+<div id="about-page" class="container mt-5 pt-5">
+  <section class="d-flex align-items-center">
+      <!-- Image on the left -->
+      <div class="me-4 animate-slide-in">
+          <img src="static/hero section for about us page with grey and rosegold color palette.png" alt="img" class="img-fluid" style="width: 50%; height: auto;">
+      </div>
+      
+      <!-- Text on the right -->
+      <div class="animate-fade-in">
+          <h1 class="display-4 mt-4" style="font-weight: bold; font-size: 70px;">About Our Platform</h1>
+          <p class="lead text" style="color:white; font-size:30px;">Empowering you with accurate house price predictions using cutting-edge machine learning.</p>
+      </div>
+  </section>
+</div>
+
+
+  
+    <section class="row mt-5">
+        <div class="col-md-4 text-center">
+          <i class="bi bi-graph-up-arrow fs-1 text-primary"></i>
+          <h3 class="mt-3" style="color: rgb(244, 191, 191);">Data-Driven Insights</h3>
+          <p class="text" style="color: white;">Our predictions are based on extensive data analysis and powerful algorithms to ensure accuracy.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-lightning-charge fs-1 text-warning"></i>
+          <h3 class="mt-3" style="color: rgb(244, 191, 191);">Fast & Reliable</h3>
+          <p class="text" style="color:white">Get house price insights within seconds with our robust and reliable system.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-house-door fs-1 text-success"></i>
+          <h3 class="mt-3" style="color: rgb(244, 191, 191);">User-Centric Design</h3>
+          <p class="text" style="color:white">Our platform is designed with simplicity and ease of use, catering to all users.</p>
+        </div>
+      </section>
+      <section class="container mt-3">
+        <h2 
+          class="text-center" 
+          style="font-size: 2.3rem; font-weight: bold; background-color: rgba(46, 46, 46, 0.641); border-radius: 15px; padding: 10px; color: #FF9F9F; max-width: 600px; margin: 0 auto;">
+          The Future of Our Platform
+        </h2>
+        <p 
+          class="text-center text-white" 
+          style="font-size: 1.2rem; line-height: 1.6; max-width: 800px; margin: 20px auto 40px auto; background-color: rgba(46, 46, 46, 0.612); border-radius: 15px; padding: 20px; transition: all 0.3s ease; cursor: pointer;"
+          onmouseover="this.style.backgroundColor='rgba(70, 70, 70, 0.8)'; this.style.transform='scale(1.05)';"
+          onmouseout="this.style.backgroundColor='rgba(46, 46, 46, 0.612)'; this.style.transform='scale(1)';">
+          We are committed to continuously evolving our platform to stay ahead of the curve. Our vision is to expand beyond house price predictions and provide users with a comprehensive suite of tools to analyze and navigate the real estate market. In the future, we plan to integrate predictive analytics for rental prices, investment opportunities, and market trends to provide a holistic experience.
+        </p>
+      </section>
+      
+      
+      
+    
+      <section class="stats-section">
+        <div class="stats-container">
+          <div class="stat-card">
+            <h2>10,000+</h2>
+            <p>Happy users who trust our platform.</p>
+          </div>
+          <div class="stat-card">
+            <h2>92%+</h2>
+            <p>Accuracy in house price predictions.</p>
+          </div>
+          <div class="stat-card">
+            <h2>24/7</h2>
+            <p>Real-time data updates for accurate insights.</p>
+          </div>
+          <div class="stat-card">
+            <h2>5 Seconds</h2>
+            <p>Get predictions in just a few clicks.</p>
+          </div>
+          
+        </div>
+      </section>
+      
+  
+      <!-- Team Section -->
+      <section class="mt-1">
+        <h2 class="text-center">Meet the Team</h2>
+        <div class="row mt-4">
+          <div class="col-md-4 text-center">
+            <img src="static/Screenshot 2024-12-14 201515.png"  alt="Team Member 1" width="120" height="120">
+            <h5 class="mt-3">Alex Johnson</h5>
+            <p class="text">Data Scientist</p>
+            <p>A data scientist passionate about uncovering insights from data and transforming them into actionable strategies</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="static/Screenshot 2024-12-14 201453.png" alt="Team Member 2" width="120" height="120">
+            <h5 class="mt-3">Samantha Lee</h5>
+            <p class="text">UX Designer</p>
+            <p>A creative UX designer dedicated to crafting seamless and visually captivating user experiences.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="static/Screenshot 2024-12-14 201420.png" alt="Team Member 3" width="120" height="120">
+            <h5 class="mt-3">Michael Brown</h5>
+            <p class="text">Full Stack Developer</p>
+            <p>A skilled full-stack developer with expertise in building robust, modern web applications</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    {%endblock%}
+</body>
+</html>
