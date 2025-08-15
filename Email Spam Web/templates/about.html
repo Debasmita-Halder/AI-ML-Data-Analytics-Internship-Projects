@@ -1,0 +1,133 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=DynaPuff:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fuzzy+Bubbles:wght@400;700&family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+{% extends 'base.html' %}
+
+{% block title %}About - AetherMail{% endblock %}
+    
+    {% block content %}
+    <!-- Hero Section -->
+    <div class="aimg">
+        <img src="static/bunny.jpg" alt="img" width="1300" height="600">
+        
+    </div>
+    
+    <!-- Introduction Section -->
+    <div class="container my-5">
+        <h2>Who We Are</h2>
+        <p>At AetherMail, we believe that every email deserves its rightful place. Whether it's a cherished note or a pesky spam message, our smart classification system ensures that your inbox stays tidy and stress-free.</p>
+        <p>Our platform uses advanced machine learning algorithms to identify and filter spam emails seamlessly. With a focus on accuracy, speed, and user-friendliness, we strive to provide an exceptional experience for our users.</p>
+    </div>
+    
+    <!-- Accordion Section for Mission, Values, etc. -->
+    <div class="container my-5">
+        <div class="accordion" id="aboutAccordion">
+            <!-- Mission Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMission">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMission" aria-expanded="true" aria-controls="collapseMission">
+                        Our Mission
+                    </button>
+                </h2>
+                <div id="collapseMission" class="accordion-collapse collapse show" aria-labelledby="headingMission" data-bs-parent="#aboutAccordion">
+                    <div class="accordion-body">
+                        <p>Our mission is to create a clutter-free digital environment where you can focus on what truly matters. With AetherMail, managing emails becomes effortless, efficient, and delightful.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Our Story Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingStory">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStory" aria-expanded="false" aria-controls="collapseStory">
+                        Our Story
+                    </button>
+                </h2>
+                <div id="collapseStory" class="accordion-collapse collapse" aria-labelledby="headingStory" data-bs-parent="#aboutAccordion">
+                    <div class="accordion-body">
+                        <p>Born out of a passion for organization and a love for innovation, AetherMail is a blend of creativity and technology. Inspired by the beauty of simplicity and the desire to solve real-world problems, we embarked on this journey to transform how emails are managed.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Why Choose Us Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingWhyChoose">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhyChoose" aria-expanded="false" aria-controls="collapseWhyChoose">
+                        Why Choose Us?
+                    </button>
+                </h2>
+                <div id="collapseWhyChoose" class="accordion-collapse collapse" aria-labelledby="headingWhyChoose" data-bs-parent="#aboutAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><strong>Smart Spam Detection:</strong> Powered by cutting-edge AI, our system adapts and learns to keep your inbox clean.</li>
+                            <li><strong>Intuitive Design:</strong> A simple, aesthetic interface that makes email management a breeze.</li>
+                            <li><strong>Your Privacy Matters:</strong> We prioritize your data security, ensuring a safe and secure platform.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Additional Section: Our Values -->
+    <div class="container my-5">
+        <h2>Our Values</h2>
+        <p>At AetherMail, we hold ourselves to the highest standards. These values guide our work and help us make the best decisions for our users:</p>
+        <ul>
+            <li><strong>Innovation:</strong> We are always seeking creative ways to improve email management.</li>
+            <li><strong>Trust:</strong> Our users' trust is paramount, and we work tirelessly to maintain it.</li>
+            <li><strong>Commitment:</strong> We are dedicated to providing a seamless, secure, and fast experience.</li>
+        </ul>
+    </div>
+    
+    <!-- Meet the Team Section -->
+    <div class="container my-5">
+        <h2>Meet The Team</h2>
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="static/tm image 1.jpg" class="card-img-top" alt="Team Member 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Kang Bitna</h5>
+                        <p class="card-text" style=" color:rgb(174, 89, 119);">Bitna is the CEO and Co-founder, dedicated to shaping AetherMail into a global leader in email management.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="static/mmmmm.jpg" class="card-img-top" alt="Team Member 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Jane Smith</h5>
+                        <p class="card-text" style=" color:rgb(174, 89, 119);">Jane is the Chief Technology Officer, leading the development of our cutting-edge machine learning algorithms.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="static/me.jpg" class="card-img-top" alt="Team Member 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Serena willsmith</h5>
+                        <p class="card-text" style=" color:rgb(174, 89, 119);">Serena is the lead designer, ensuring that AetherMail's interface is both user-friendly and beautiful.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+    
+    {% endblock %}
+    

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - AetherMail{% endblock %}
+
+
+
+
+
+
+
+{% block content %}
+<div class="contact-container">
+  <!-- Main Section -->
+  <div class="contact-main">
+    <!-- Left Image Section -->
+    <div class="contact-image">
+      <img src="static/DALL·E 2024-11-24 19.45.35 - A cute and cozy illustration of a bunny sitting beside an oversized envelope and holding a phone, symbolizing communication. The bunny is surrounded b.webp" alt="Contact Image">
+    </div>
+    
+    <!-- Right Info Section -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Email:</strong> support@aethermail.com</p>
+      <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+      <p><strong>Social Media:</strong></p>
+      <ul>
+        <li><a href="https://facebook.com/aethermail" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com/aethermail" target="_blank">Twitter</a></li>
+        <li><a href="https://linkedin.com/company/aethermail" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="contact-form">
+    <h3>Send Us a Message</h3>
+    <form action="#" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Map Section -->
+  <div class="map">
+    <h3>Find Us</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.985160508599!2d88.45726807475737!3d22.579658332712675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02753d7e32e74f%3A0x37d1074d43a2ce8!2sWonderland%20Park%2C%20Axis%20mall%2C%20Street%20Number%20106%2C%20Sub-Central%20Business%20District(Action%20Area%201)%2C%20Action%20Area%20I%2C%20Newtown%2C%20New%20Town%2C%20West%20Bengal%20700156!5e0!3m2!1sen!2sin!4v1732459047968!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+{% endblock %}
+
+
+
+

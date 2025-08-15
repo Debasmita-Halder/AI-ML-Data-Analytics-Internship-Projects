@@ -1,0 +1,138 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=DynaPuff:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Delius&family=DynaPuff:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fuzzy+Bubbles:wght@400;700&family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+{% extends 'base.html' %}
+
+{% block title %}Home - AetherMail{% endblock %}
+
+{% block content %}
+
+<div class="main">   
+    <img src="static/HOME BANNER.jpg" alt="img" class="background-image">
+<h1>Welcome to AetherMail</h1>
+<p>Classify your emails effectively and keep your inbox spam-free!</p>
+</div>
+<div class="email-classifier">
+    <h2>Classify Your Email</h2>
+    <form action="/classify" method="POST">
+        
+        <textarea id="email-input" name="email" placeholder="Enter email content..." rows="6" cols="60" required></textarea><br><br>
+        <button type="submit" class="classify-btn">Classify Email</button>
+    </form>
+</div>
+<div id="result"></div>
+<div class="highlights">
+    <div class="row">
+        <div class="column">
+            <img src="static/Screenshot 2024-11-24 190433.png" alt="Accuracy">
+            <h3>Accurate Classification</h3>
+            <p>Our advanced AI ensures reliable spam detection.</p>
+        </div>
+        <div class="column">
+            <img src="static/Screenshot 2024-11-24 190511.png" alt="Security">
+            <h3>Enhanced Security</h3>
+            <p>Your data is safe with our state-of-the-art encryption.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="static/Screenshot 2024-11-24 190528.png" alt="Speed">
+            <h3>Lightning Fast</h3>
+            <p>Classify emails in seconds with our optimized algorithms.</p>
+        </div>
+        <div class="column">
+            <img src="static/Screenshot 2024-11-24 190433.png" alt="User-Friendly">
+            <h3>Simple Interface</h3>
+            <p>Designed for everyone, no tech expertise needed.</p>
+        </div>
+    </div>
+</div>
+<!-- How It Works Section -->
+<!-- How It Works Section -->
+<div class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps-container">
+      <div class="step">
+        <h3>Step 1</h3>
+        <p>Upload your email data into the system.</p>
+      </div>
+      <div class="step">
+        <h3>Step 2</h3>
+        <p>Our AI processes the data to classify it as spam or not.</p>
+      </div>
+      <div class="step">
+        <h3>Step 3</h3>
+        <p>Get your results instantly with accuracy and speed!</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Testimonials Section -->
+<div class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"This tool is amazing! It helped me clean up my inbox in no time."</p>
+        <span>- Jane Doe</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"A real time-saver. It detected spam emails with impressive accuracy!"</p>
+        <span>- John Smith</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"From The Interface To The Service Everything Is Just So Perfect"</p>
+        <span>- Serena </span>
+      </div>
+      <div class="testimonial-card">
+        <p>"One Of the best Tool On Internet"</p>
+        <span>- Kang Bitna</span>
+      </div>
+    </div>
+  </div>
+  <!-- Privacy Guarantee Section -->
+
+  <section class="cta-section">
+    <div class="cta-container">
+        <h2 class="cta-title" style="color:rgb(120, 44, 77);">Ready to Simplify Your Inbox?</h2>
+        <p class="cta-text" style="color: rgb(94, 32, 59);">Join the AetherMail community and experience the ease of clutter-free emails. Take the first step towards smarter email management today!</p>
+        <a href="/signup" class="cta-button">Get Started</a>
+    </div>
+</section>
+
+  
+
+{% endblock %}
+<script>
+  document.getElementById('email-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Get the email input value
+      const emailContent = document.getElementById('email-input').value;
+
+      // Send the data to the Flask backend using Fetch API
+      const response = await fetch('/predict', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: emailContent })
+      });
+
+      const result = await response.json();
+
+      // Display the prediction result
+      if (response.ok) {
+          document.getElementById('result').innerHTML = `
+              <h3>Prediction: ${result.prediction}</h3>
+              <p>Spam Probability: ${result.spam_probability}</p>
+          `;
+      } else {
+          document.getElementById('result').innerHTML = `
+              <h3>Error: ${result.error}</h3>
+          `;
+      }
+  });
+</script>
