@@ -4,7 +4,7 @@ This folder contains the Email Spam Detection project, which identifies whether 
 
 📂 What's Inside
 
-Dataset – Collection of emails labeled as spam or ham (not spam).
+Dataset – Here is the datset link in Kaggle (https://www.kaggle.com/datasets/purusinghvi/email-spam-classification-dataset)
 
 Preprocessing Scripts – Cleans and prepares email text for training.
 
